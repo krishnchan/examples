@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script data-require="angular.js@1.3.0-beta.5" data-semver="1.3.0-beta.5" src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div ng-app="add" ng-controller="Addnumbers as addSum">
+    <b>Invoice:</b>
+    <div>
+      First number:
+      <input type="number" min="0" ng-model="addSum.first" required="" />
+    </div>
+    <div>
+      Second number:
+      <input type="number" min="0" ng-model="addSum.second" required="" />
+    </div>
+    <div>
+      <b>Total: </b> {{addSum.total()}}
+    </div>
+  </div>
+</body>
+
+</html>
