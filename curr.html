@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-guide-concepts-2-production</title>
+  
+
+  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="curr.js"></script>
+  
+
+  
+</head>
+<body >
+  <div ng-app="invoice1" ng-controller="InvoiceController as invoice">
+  <b>Conversion:</b>
+  <div>
+    Rupees: <input type="number" min="0" ng-model="invoice.rup" required >
+  </div>
+  <div>
+   
+    <select ng-model="invoice.inCurr">
+      <option ng-repeat="c in invoice.currencies">{{c}}</option>
+    
+    </select>
+  
+  
+  </div>
+    <div>
+    <b>Total:</b>
+   <!-- {{invoice.inCurr}}-->
+   
+      {{invoice.total() }}
+   <br>
+    
+  </div>
+</div>
+</body>
+</html>
